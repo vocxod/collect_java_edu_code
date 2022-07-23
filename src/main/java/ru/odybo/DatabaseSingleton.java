@@ -3,6 +3,10 @@ package ru.odybo;
 class Database {
 
   // https://www.programiz.com/java-programming/singleton
+  // Singleton is a design pattern rather than a feature specific to Java. 
+  // A design pattern is like our code library that includes various coding 
+  // techniques shared by programmers around the world.
+  //
   // First sing of SINGLETON - 
   // 1) It has a private static property of its own object class.
    private static Database dbObject;
@@ -30,8 +34,9 @@ class Database {
 
 class DatabaseSingleton {
    public static void main(String[] args) {
-      Database db1;
-
+     // In the Singleton approach, we can only define the value of the singleton class to access it.
+      Database db1; 
+      
       // refers to the only object of Database
       db1= Database.getInstance();
       
