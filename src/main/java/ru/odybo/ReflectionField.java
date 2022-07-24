@@ -7,7 +7,16 @@ class ReflectionField {
 
   public static void main(String[] args) {
     try {
-      // create an object of Dog
+      Dog d2 = new Dog();
+      Dog d3 = new Dog("Джек Рассел Терьер");
+
+      System.out.println(d2.getType());
+      d2.display();
+      System.out.println(d3.getType());
+      d3.display();
+      System.out.println(" ");
+
+       // create an object of Dog
       Dog d1 = new Dog();
 
       // create an object of Class
@@ -31,12 +40,21 @@ class ReflectionField {
       System.out.println(" ");
 
       // d1.labrador = "LaBrRdOr";
-      System.out.println(d1.toString());
-      Dog d2 = new Dog();
-      System.out.println(d2.toString());
-      Dog d3 = new Dog("Джек Рассел Терьер");
-      System.out.println(d3.toString());
+      System.out.println(d1.getType());
       d1.display();
+      System.out.println(" ");
+
+      System.out.println(d2.getType());
+      d2.display();
+      Class toD2 = d2.getClass();
+      Field fD2Type = toD2.getField("type");
+      fD2Type.set(d2, "УличнаяДворняга");
+      System.out.println(d2.getType());
+      System.out.println(" ");
+
+      System.out.println(d3.getType());
+      d3.display();
+      System.out.println(" ");
 
     }
     
