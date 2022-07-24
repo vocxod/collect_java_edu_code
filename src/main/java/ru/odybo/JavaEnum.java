@@ -38,7 +38,24 @@ enum Size {
 
 // Text colors
 enum Tx {
-  RED, GREEN, RESET, BLUE, YELLOW, PURPLE;
+  RED("Красный"), 
+  GREEN("Зеленый"), 
+  RESET("Системный"), 
+  BLUE("Синий"), 
+  YELLOW("Желтый"), 
+  PURPLE("Пурпур");
+  
+  private final String carColor;
+
+  // private enum constructor
+  private Tx(String carColor) {
+    this.carColor = carColor;
+  }
+  
+  public String getColorDescription(){
+    return this.carColor;
+  }
+
   // An enum class can include methods and fields just like regular classes.
   public String getColor(){
     switch (this){
@@ -102,7 +119,8 @@ class JavaEnum {
     prn("4. Enum Tx.YELLOW.name() = " + Tx.YELLOW.name(), Tx.YELLOW);
     prn("5. Java Enum Tx.valueOf(\"PURPLE\") = " + Tx.valueOf("PURPLE"), Tx.PURPLE);
     for(Tx cItem: aColors){
-      prn("6. Print aColors=Tx.values() items: " + cItem, Tx.RESET);
+      prn("6. Print aColors=Tx.values() items: " + cItem.toString() + " : "
+          + cItem.getColorDescription(), Tx.RESET);
     }
 
   }
