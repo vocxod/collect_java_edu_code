@@ -83,13 +83,28 @@ class Test {
 
 class JavaEnum {
 
+  public static void prn(String sLine, Tx cColor){
+    System.out.println(cColor.getColor() + sLine + Tx.RESET.getColor());
+  }
+
   public static void main(String[] args) {
     Test t1 = new Test(Size.LARGE);
     t1.orderPizza();
-    System.out.println(Size.SMALL);
-    System.out.println(Size.MEDIUM);
     System.out.println(Tx.RED.getColor() + "The size of the pizza is " + Size.SMALL.getSize()
         + Tx.RESET.getColor() );
+    Tx cBlue = Tx.BLUE;
+    Tx cGreen = Tx.GREEN;
+    Tx[] aColors = Tx.values();
+    prn("Try standard ENUM methods", Tx.GREEN);
+    prn("1. Java Enum ordinal() cBlue.ordinal() = " + cBlue.ordinal(), cBlue);
+    prn("2. Enum Tx.GREEN.compareTo(Tx.RESET) = " + Tx.GREEN.compareTo(Tx.RESET), cGreen);
+    prn("3. Enum Tx.RED.toString() = " + Tx.RED.toString(), Tx.RED);
+    prn("4. Enum Tx.YELLOW.name() = " + Tx.YELLOW.name(), Tx.YELLOW);
+    prn("5. Java Enum Tx.valueOf(\"PURPLE\") = " + Tx.valueOf("PURPLE"), Tx.PURPLE);
+    for(Tx cItem: aColors){
+      prn("6. Print aColors=Tx.values() items: " + cItem, Tx.RESET);
+    }
+
   }
 
 }
