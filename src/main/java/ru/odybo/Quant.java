@@ -18,5 +18,10 @@ public class Quant
       // this.childQuant = 
     }
 
+    @Override
+    public String toString(){
+      return "qnt: " + quantNumber;
+    }
+
 }
 
