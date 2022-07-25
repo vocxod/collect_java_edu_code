@@ -32,6 +32,7 @@ ru/odybo/StringEnum$1.class
 ru/odybo/Polygon.class
 ru/odybo/JavaReflection.class
 ru/odybo/Tx.class
+ru/odybo/TryWithResources.class
 ru/odybo/JavaReflection$1.class
 ru/odybo/JavaReflection$ComputerLanguages.class
 ru/odybo/Tx$1.class
