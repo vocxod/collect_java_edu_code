@@ -1,7 +1,12 @@
 package ru.odybo;
 
 class Animal {
-  
+ 
+
+  public void displayInfo(){
+    System.out.println("animal display info");
+  }
+
   public String toString(){
     return "животное";
   }
@@ -13,6 +18,11 @@ public class Dog extends Animal {
   public String type;
   private String color;
   private int age;
+
+  @Override
+  public void displayInfo(){
+    System.out.println("I'm not simple \"animal\"! I'm a DOG!");
+  }
 
   Dog(){
     this.type = "Дворняга";

@@ -28,13 +28,13 @@ ru/odybo/Size.class
 ru/odybo/StringEnum.class
 ru/odybo/JavaReflection$ComputerLanguages$1.class
 ru/odybo/StringEnum$Size$2.class
-ru/odybo/StringEnum$1.class
 ru/odybo/Polygon.class
 ru/odybo/JavaReflection.class
 ru/odybo/Tx.class
 ru/odybo/TryWithResources.class
-ru/odybo/JavaReflection$1.class
+ru/odybo/Annotation.class
 ru/odybo/JavaReflection$ComputerLanguages.class
 ru/odybo/Tx$1.class
 ru/odybo/App.class
 ru/odybo/JavaReflection$ComputerLanguages$4.class
+ru/odybo/ThrowMultyResources.class
